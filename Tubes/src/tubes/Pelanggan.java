@@ -9,17 +9,8 @@ package tubes;
  *
  * @author Rahmat Khodirsyah
  */
-public class Petugas extends Orang {
-    private String jabatan;
-
-    public String getJabatan() {
-        return jabatan;
-    }
-
-    public void setJabatan(String jabatan) {
-        this.jabatan = jabatan;
-    }
-    
+public class Pelanggan extends Orang {
+   
     @Override
     public long getId() {
         return super.getId();

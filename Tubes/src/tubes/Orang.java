@@ -9,44 +9,32 @@ package tubes;
  *
  * @author Rahmat Khodirsyah
  */
-public class Petugas extends Orang {
-    private String jabatan;
+public abstract class Orang {
+    private long id;
+    private String nama;
+    private long telp;
 
-    public String getJabatan() {
-        return jabatan;
-    }
-
-    public void setJabatan(String jabatan) {
-        this.jabatan = jabatan;
-    }
-    
-    @Override
     public long getId() {
-        return super.getId();
+        return id;
     }
 
-    @Override
     public void setId(long id) {
-        super.setId(id);
+        this.id = id;
     }
 
-    @Override
     public String getNama() {
-        return super.getNama();
+        return nama;
     }
 
-    @Override
     public void setNama(String nama) {
-        super.setNama(nama);
+        this.nama = nama;
     }
 
-    @Override
     public long getTelp() {
-        return super.getTelp();
+        return telp;
     }
 
-    @Override
     public void setTelp(long telp) {
-        super.setTelp(telp);
+        this.telp = telp;
     }
 }
