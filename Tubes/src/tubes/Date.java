@@ -19,7 +19,11 @@ public class Date {
     }
 
     public void setTgl(int tgl) {
-        this.tgl = tgl;
+        if(tgl >=1 && tgl <=30){
+            this.tgl=tgl;
+        }else{
+            System.out.println("Tanggal yang anda masukan salah");
+        }
     }
 
     public int getBulan() {
@@ -27,7 +31,11 @@ public class Date {
     }
 
     public void setBulan(int bulan) {
-        this.bulan = bulan;
+        if(bulan >=1 && bulan <=12){
+            this.bulan=bulan;
+        }else{
+            System.out.println("Tanggal yang anda masukan salah");
+        }
     }
 
     public int getTahun() {
