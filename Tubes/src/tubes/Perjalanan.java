@@ -15,8 +15,10 @@ public class Perjalanan {
     private PaketWisata paket;
     private Date Jadwal;
     
-    public void addPelanggan(Pelanggan p){
+    public void addPelanggan(Pelanggan p, int i){
         p = new Pelanggan();
+        p = pelanggan[i];
+        i++;
     }
 
     public void setPaket(PaketWisata paket) {
