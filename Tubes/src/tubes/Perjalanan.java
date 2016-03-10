@@ -12,21 +12,33 @@ package tubes;
 public class Perjalanan {
     private Pelanggan[] pelanggan;
     private double total;
+    private int jumlahpelanggan;
     private PaketWisata paket;
     private Date Jadwal;
-    
-    public void addPelanggan(Pelanggan p, int i){
-        p = new Pelanggan();
-        p = pelanggan[i];
-        i++;
+    public Perjalanan(int i,double tot){
+        pelanggan=new Pelanggan[i];
+        total=tot;
     }
-
+    
+    public void addPelanggan(Pelanggan p){
+        pelanggan[jumlahpelanggan]=p;
+        jumlahpelanggan++;
+    }
+    public Pelanggan getpelanggan(int i){
+        return pelanggan[i];
+    }
     public void setPaket(PaketWisata paket) {
         this.paket = paket;
     }
-    
+    public PaketWisata getpaket(){
+        return paket;
+    }
     public double getTotal() {
-        return total;
+        for(int i=0;i<paket.getjumlah();i++){
+            total=total+paket.getDaftarTujuanWisata(i).getHarga();
+        }
+        total=total+paket.getKendaraan().getHarga();
+        return total*jumlahpelanggan;
     }
 
     public void setTotal(double total) {
@@ -39,6 +51,9 @@ public class Perjalanan {
 
     public void setJadwal(Date Jadwal) {
         this.Jadwal = Jadwal;
+    }
+    public int getJumlah(){
+        return jumlahpelanggan;
     }
     
 }

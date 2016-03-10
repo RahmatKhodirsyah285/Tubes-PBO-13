@@ -13,30 +13,18 @@ public class TempatWisata {
     private String nama;
     private String alamat;
     private double harga;
-    private String jenis;
-
+    public TempatWisata(String nama,String alamat,double harga){
+        this.nama=nama;
+        this.alamat=alamat;
+        this.harga=harga;
+    }
     public String getNama() {
         return nama;
-    }
-    public void setNama(String nama) {
-        this.nama = nama;
     }
     public String getAlamat() {
         return alamat;
     }
-    public void setAlamat(String alamat) {
-        this.alamat = alamat;
-    }
     public double getHarga() {
         return harga;
-    }
-    public void setHarga(double harga) {
-        this.harga = harga;
-    }
-    public String getJenis() {
-        return jenis;
-    }
-    public void setJenis(String jenis) {
-        this.jenis = jenis;
     }
 }

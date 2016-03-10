@@ -10,15 +10,8 @@ package tubes;
  * @author Rahmat Khodirsyah
  */
 public class Kendaraan {
-    private String seat;
     private double harga;
 
-    public String getSeat() {
-        return seat;
-    }
-    public void setSeat(String seat) {
-        this.seat = seat;
-    }
     public double getHarga() {
         return harga;
     }

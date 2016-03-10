@@ -32,12 +32,12 @@ public class Pelanggan extends Orang {
     }
 
     @Override
-    public long getTelp() {
+    public String getTelp() {
         return super.getTelp();
     }
 
     @Override
-    public void setTelp(long telp) {
+    public void setTelp(String telp) {
         super.setTelp(telp);
     }
 }

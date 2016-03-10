@@ -13,14 +13,6 @@ public class Kereta extends Kendaraan {
     private String kelas;
 
     @Override
-    public String getSeat() {
-        return super.getSeat();
-    }
-    @Override
-    public void setSeat(String seat) {
-        super.setSeat(seat);
-    }
-    @Override
     public double getHarga() {
         return super.getHarga();
     }

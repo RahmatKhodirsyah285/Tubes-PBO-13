@@ -12,7 +12,7 @@ package tubes;
 public abstract class Orang {
     private long id;
     private String nama;
-    private long telp;
+    private String telp;
 
     public long getId() {
         return id;
@@ -30,11 +30,11 @@ public abstract class Orang {
         this.nama = nama;
     }
 
-    public long getTelp() {
+    public String getTelp() {
         return telp;
     }
 
-    public void setTelp(long telp) {
+    public void setTelp(String telp) {
         this.telp = telp;
     }
 }

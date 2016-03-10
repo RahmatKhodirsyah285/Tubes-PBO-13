@@ -10,15 +10,18 @@ package tubes;
  * @author Rahmat Khodirsyah
  */
 public class PaketWisata {
-    private TempatWisata daftarTujuanWisata;
+    private TempatWisata[] daftarTujuanWisata;
     private Kendaraan Kendaraan;
-
-    public void addTempatWisata(TempatWisata w){
-        w = new TempatWisata();
-        this.daftarTujuanWisata = w;
+    private int jumlah;
+    public PaketWisata(int i){
+        daftarTujuanWisata=new TempatWisata[i];
     }
-    public TempatWisata getDaftarTujuanWisata() {
-        return daftarTujuanWisata;
+    public void addTempatWisata(TempatWisata w){
+        daftarTujuanWisata[jumlah]=w;
+        jumlah++;
+    }
+    public TempatWisata getDaftarTujuanWisata(int i) {
+        return daftarTujuanWisata[i];
     }
     public Kendaraan getKendaraan() {
         return Kendaraan;
@@ -26,4 +29,7 @@ public class PaketWisata {
     public void setKendaraan(Kendaraan Kendaraan) {
         this.Kendaraan = Kendaraan;
     } 
+    public int getjumlah(){
+        return jumlah;
+    }
 }
