@@ -15,6 +15,7 @@ public class Perjalanan {
     private int jumlahpelanggan;
     private PaketWisata paket;
     private Date Jadwal;
+    
     public Perjalanan(int i,double tot){
         pelanggan=new Pelanggan[i];
         total=tot;
@@ -27,6 +28,14 @@ public class Perjalanan {
     public Pelanggan getpelanggan(int i){
         return pelanggan[i];
     }
+    public Pelanggan getpelanggan(String a){
+        for (int i = 0; i < jumlahpelanggan; i++) {
+            if (pelanggan[i].getId().equalsIgnoreCase(a)){
+                return pelanggan[i];
+            }         
+        }
+        return null;
+    }
     public void setPaket(PaketWisata paket) {
         this.paket = paket;
     }
@@ -34,6 +43,7 @@ public class Perjalanan {
         return paket;
     }
     public double getTotal() {
+        total=0;
         for(int i=0;i<paket.getjumlah();i++){
             total=total+paket.getDaftarTujuanWisata(i).getHarga();
         }

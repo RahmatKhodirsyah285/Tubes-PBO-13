@@ -21,12 +21,12 @@ public class Petugas extends Orang {
     }
     
     @Override
-    public long getId() {
+    public String getId() {
         return super.getId();
     }
 
     @Override
-    public void setId(long id) {
+    public void setId(String id) {
         super.setId(id);
     }
 
@@ -48,5 +48,9 @@ public class Petugas extends Orang {
     @Override
     public void setTelp(String telp) {
         super.setTelp(telp);
+    }
+    
+    public void display(){
+    
     }
 }

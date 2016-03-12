@@ -10,14 +10,19 @@ package tubes;
  * @author Rahmat Khodirsyah
  */
 public class TempatWisata {
+    private String id;
     private String nama;
     private String alamat;
     private double harga;
-    public TempatWisata(String nama,String alamat,double harga){
-        this.nama=nama;
-        this.alamat=alamat;
-        this.harga=harga;
+
+    public TempatWisata(String id, String nama, String alamat, double harga) {
+        this.id = id;
+        this.nama = nama;
+        this.alamat = alamat;
+        this.harga = harga;
     }
+    
+    
     public String getNama() {
         return nama;
     }
@@ -27,4 +32,9 @@ public class TempatWisata {
     public double getHarga() {
         return harga;
     }
+
+    public String getId() {
+        return id;
+    }
+    
 }

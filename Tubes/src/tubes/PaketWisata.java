@@ -23,6 +23,22 @@ public class PaketWisata {
     public TempatWisata getDaftarTujuanWisata(int i) {
         return daftarTujuanWisata[i];
     }
+    public TempatWisata getDaftarTujuanWisatabyID(String a){
+        for (int i = 0; i < jumlah; i++) {
+            if (daftarTujuanWisata[i].getId().equalsIgnoreCase(a)){
+                return daftarTujuanWisata[i];
+            }         
+        }
+        return null;
+    }
+    public void removeTempatWisata(int i){
+        daftarTujuanWisata[i]=null;
+        for(int a=i;a<jumlah-1;a++){
+            daftarTujuanWisata[a]=daftarTujuanWisata[a+1];
+            a++;
+        }
+        jumlah=jumlah-1;
+    }
     public Kendaraan getKendaraan() {
         return Kendaraan;
     }
@@ -32,4 +48,5 @@ public class PaketWisata {
     public int getjumlah(){
         return jumlah;
     }
+    
 }
