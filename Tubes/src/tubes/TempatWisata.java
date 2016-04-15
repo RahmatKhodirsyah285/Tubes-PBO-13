@@ -14,15 +14,27 @@ public class TempatWisata {
     private String nama;
     private String alamat;
     private double harga;
-
+    public TempatWisata(){
+        
+    }
     public TempatWisata(String id, String nama, String alamat, double harga) {
         this.id = id;
         this.nama = nama;
         this.alamat = alamat;
         this.harga = harga;
     }
-    
-    
+    public void setID(String id){
+        this.id=id;
+    }
+    public void setNama(String nama){
+        this.nama=nama;
+    }
+    public void setAlamat(String alamat){
+        this.alamat=alamat;
+    }
+    public void setharga(double harga){
+        this.harga=harga;
+    }
     public String getNama() {
         return nama;
     }

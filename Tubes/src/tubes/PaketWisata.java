@@ -10,11 +10,18 @@ package tubes;
  * @author Rahmat Khodirsyah
  */
 public class PaketWisata {
+    private int kodePaket;
     private TempatWisata[] daftarTujuanWisata;
     private Kendaraan Kendaraan;
     private int jumlah;
     public PaketWisata(int i){
         daftarTujuanWisata=new TempatWisata[i];
+    }
+    public int getKodePaket() {
+        return kodePaket;
+    }
+    public void setKodePaket(int kodePaket) {
+        this.kodePaket = kodePaket;
     }
     public void addTempatWisata(TempatWisata w){
         daftarTujuanWisata[jumlah]=w;

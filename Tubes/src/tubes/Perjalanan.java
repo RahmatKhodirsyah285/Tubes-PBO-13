@@ -15,12 +15,25 @@ public class Perjalanan {
     private int jumlahpelanggan;
     private PaketWisata paket;
     private Date Jadwal;
-    
-    public Perjalanan(int i,double tot){
-        pelanggan=new Pelanggan[i];
+    private int jumlah;
+    public Perjalanan(int jumlah,double tot){
+        pelanggan=new Pelanggan[jumlah];
         total=tot;
     }
-    
+    public Perjalanan(){
+    }
+    public void setJumlah(int i){
+        pelanggan =new Pelanggan[i];
+    }
+    public int getJumlahi(){
+        return jumlah;
+    }
+    public void setTotali(double tot){
+        total=tot;
+    }
+    public double getTotali(){
+        return total;
+    }
     public void addPelanggan(Pelanggan p){
         pelanggan[jumlahpelanggan]=p;
         jumlahpelanggan++;
